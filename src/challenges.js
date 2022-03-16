@@ -35,9 +35,9 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(0,0));
 
-// Desafio 6
+// Desafio 6 <>
 function highestCount(numbers) {
-  let maiorNumero = 0;
+  let maiorNumero = numbers[0];
   let repeticao = 0;
 
   for (let i = 0; i < numbers.length; i++){
@@ -51,12 +51,23 @@ function highestCount(numbers) {
         repeticao += 1
       }
   } return repeticao;
-} console.log(highestCount([0,0,0]));
+} console.log(highestCount([-2,-1,-1]));
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+// Desafio 7 <>
+function catAndMouse(mouse,cat1,cat2) {
+  let difGato1 = Math.abs(mouse - cat1);
+  let difGato2 = Math.abs(mouse - cat2);
+  
+  if (difGato1 < difGato2){
+    return "cat1";
+  }
+  else if (difGato1 > difGato2){
+    return "cat2";
+  }
+  else if (difGato1 === difGato2){
+    return "os gatos trombam e o rato foge";
+  }
+} console.log(catAndMouse(4,2,0));
 
 // Desafio 8
 function fizzBuzz(numeros) {
@@ -85,9 +96,13 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(nomesTech,name) {
+  for (let i = 0; i < nomesTech.length; i++){
+    return nomesTech[i]
+  }
+
+  
+} console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "lucas"));
 
 module.exports = {
   calcArea,
