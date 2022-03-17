@@ -35,7 +35,7 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(0,0));
 
-// Desafio 6 <>
+// Desafio 6 
 function highestCount(numbers) {
   let maiorNumero = numbers[0];
   let repeticao = 0;
@@ -53,7 +53,7 @@ function highestCount(numbers) {
   } return repeticao;
 } console.log(highestCount([-2,-1,-1]));
 
-// Desafio 7 <>
+// Desafio 7 
 function catAndMouse(mouse,cat1,cat2) {
   let difGato1 = Math.abs(mouse - cat1);
   let difGato2 = Math.abs(mouse - cat2);
@@ -87,22 +87,44 @@ let armazeneString = [];
 console.log(fizzBuzz([2,15,7,9,45]));
 
 // Desafio 9
-function encode() {
+function encode(string) {
+  let trocaLetra = string.split("")
+  for (let i in trocaLetra){
+    if (trocaLetra[i] == "a") {
+      trocaLetra[i] = 1; 
+    } else if (trocaLetra[i] == "e") {
+      trocaLetra[i] = 2; 
+    } else if (trocaLetra[i] == "i") {
+      trocaLetra[i] = 3; 
+    } else if (trocaLetra[i] == "o") {
+      trocaLetra[i] = 4; 
+    } else if (trocaLetra[i] == "u") {
+      trocaLetra[i] = 5; 
+    }
+  } return trocaLetra.join("");
+} 
+function decode(string) {
+  let trocaLetra = string.split("")
+  for (let i in trocaLetra){
+    if (trocaLetra[i] == 1) {
+      trocaLetra[i] = "a"; 
+    } else if (trocaLetra[i] == 2) {
+      trocaLetra[i] = "e"; 
+    } else if (trocaLetra[i] == 3) {
+      trocaLetra[i] = "i"; 
+    } else if (trocaLetra[i] == 4) {
+      trocaLetra[i] = "o"; 
+    } else if (trocaLetra[i] == 5) {
+      trocaLetra[i] = "u"; 
+    }
+  } return trocaLetra.join("");
+}
+console.log(encode("hi there!"));
+
+// Desafio 10  <>
+function techList() {
 
 }
-  
-function decode() {
-    
-}
-
-// Desafio 10
-function techList(nomesTech,name) {
-  for (let i = 0; i < nomesTech.length; i++){
-    return nomesTech[i]
-  }
-
-  
-} console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "lucas"));
 
 module.exports = {
   calcArea,
