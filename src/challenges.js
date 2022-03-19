@@ -121,10 +121,23 @@ function decode(string) {
 }
 console.log(encode("hi there!"));
 
-// Desafio 10  <>
-function techList() {
-
-}
+// Desafio 10  
+function techList(nomesTech, name){
+  let listinha = [];
+  let array = [];
+ if (nomesTech.length == 0 ){
+  return "Vazio!";
+} else {
+let list = nomesTech.sort();
+  for (let i= 0; i < list.length; i++){
+ let newList = list[i];
+   listinha.push(newList);
+  } for (let i= 0; i < listinha.length; i++){
+    let lista = {"tech": listinha[i], "name" : name};
+    array.push(lista);
+ } 
+} return array;
+} console.log(techList([], "lucas"));
 
 module.exports = {
   calcArea,
