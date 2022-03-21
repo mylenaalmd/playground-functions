@@ -35,9 +35,21 @@ function generatePhoneNumber(numbers) {
   }  console.log(generatePhoneNumber([7, 9, 8, 9, 6, 1, 9, 3, 5, 9, 2]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA,lineB,lineC) {
+
+if (lineA > (lineB + lineC)|| lineB > (lineA + lineC) || lineC > (lineB + lineC)){
+  return false;
+ }
+ if (Math.abs(lineA) < Math.abs(lineB - lineC) || Math.abs(lineB) < Math.abs(lineA - lineC) || Math.abs(lineC) < Math.abs(lineA - lineB)){
+  return false;
+ }
+ if (lineA < (lineB + lineC) && Math.abs(lineA) > Math.abs(lineB - lineC)){
+  if (lineB < (lineA + lineC) && Math.abs(lineB) > Math.abs(lineA - lineC)){
+      if (lineC < (lineA + lineB) && Math.abs(lineC) > Math.abs(lineA - lineB)){
+    }
+  }
+ } return true; 
+ } console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
